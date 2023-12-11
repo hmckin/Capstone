@@ -3,3 +3,7 @@
 
 # Dataset
 FooDD/
+
+# Jupyter auto-save
+.ipynb_checkpoints/
+
