@@ -7,7 +7,7 @@ There is opportunity for machine learning to eliminate time consuming and repeti
 
 ## Machine Learning Solution
 
-This project will use a CNN model to classify common food items. The project will also estimate the volume of the food items using a thumb in the image as a reference to calculate the cross-sectional area of the item. The calorie estimation can be achieved by calculating the volume using the cross-sectional area, depth, denisty of the item and approximating the item to a common shape. (ex. apple represented as a sphere)
+This project will use a pre-trained CNN model to classify common food items. The project will also estimate the volume of the food items using a thumb in the image as a reference to calculate the cross-sectional area of the item. This will be done using an off-the-shelf model from Tensorflow API. The calorie estimation can be achieved by calculating the volume using the cross-sectional area, depth, denisty of the item and approximating the item to a common shape. (ex. apple represented as a sphere)
 
 ## Users and Impact
 
@@ -15,9 +15,20 @@ Nutrition poses a number of positive and negative impacts to a diverse range of 
 
 ## Dataset
 
-The dataset consists of 3828 images. There are 17 unique food classes and 3 classes with mixed objects from the 17 classes. Each of these photos has a thumb in the reference. 
+The dataset consists of 3281 images. There are 16 unique food classes that I will be classifying. Each of these photos has a thumb in the reference. 
 
-Each of these images can be further processes with rotations and recolouring to create more data for model training.
+I have resized each of these images to a resolution of (224,224,3) which is required for EfficientNet B0. 
 
-I have written a python script to locate all the image filepaths and convert them from .jpg to numpy arrays.
+## EDA
 
+I focus my EDA on investigating class imbalances, plotting pixel value intensity histograms and reconstructing the average image from each class using the mean values of the NumPy arrays. 
+
+## Model Architecture
+
+I have developed a baseline model that uses EfficientNet B0 as the backbone. I have frozen the weights in the convolutional layers to take advantage of training on the Imagenet dataset. 
+
+I then added a Global Average Pooling layer, a dense layer, dropout and a final dense layer matching the number of classes in the dataset. 
+
+## Model Evaluation
+
+I evaluate the model using loss and accuracy curves as well as a confusion matrix.
