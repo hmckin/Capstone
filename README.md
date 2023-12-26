@@ -2,8 +2,7 @@
 
 ## Results
 
-![Screenshot 1](https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedApple.png)
-![Screenshot 2](https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedBread.png)
+![Predicted Apple](https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedApple.png)
 
 ## Motivation and Problem Area
 
