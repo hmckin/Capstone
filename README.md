@@ -31,7 +31,19 @@ In the object detection model, the images are loaded directly from JPEG files us
 
 ## Exploratory Data Analysis (EDA)
 
-The EDA focuses on visualizing pixel value intensity histograms and reconstructing average images using mean values from NumPy arrays. This process uncovers implicit features that convolutional neural networks (CNNs) may learn during training. Pixel intensity histograms visually represent the distribution of pixel values, showing patterns specific to different food items. The reconstruction of average images provides insights into the characteristic appearance of each class, contributing to an understanding of features influencing model discernibility. Overall, this EDA strategically explores image characteristics, shedding light on features crucial for accurate classification in the learning process of CNNs.
+The EDA focuses on visualizing pixel value intensity histograms and reconstructing average images using mean values from NumPy arrays. This process uncovers implicit features that convolutional neural networks (CNNs) may learn during training. Pixel intensity histograms visually represent the distribution of pixel values, showing patterns specific to different food items. An example of this analysis is shown below:
+
+<div style="display: flex>
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PixelValueHistograms.png" alt="Screenshot 1" width="600" height="500">
+</div>
+
+The reconstruction of average images provides insights into the characteristic appearance of each class, contributing to an understanding of features influencing model discernibility. This reconstruction is shown for each class here:
+
+<div style="display: flex>
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AverageImages.png" alt="Screenshot 1" width="600" height="500">
+</div>
+
+Overall, this EDA strategically explores image characteristics, shedding light on features crucial for accurate classification in the learning process of CNNs.
 
 ## Model Evaluation
 
@@ -49,4 +61,10 @@ A confusion matrix is employed to evaluate the classification results, offering 
 </div>
 
 Without ground truth labels for calories, there was no method for evaluating the accuracy of the object detection model.
+
+## Conclusion
+
+This project leverages machine learning techniques to address challenges in nutrition tracking and dietary adherence. The utilization of transfer learning with EfficientNet B0 facilitates accurate classification of common food items, while a sophisticated object detection model, blending Faster RCNN and InceptionResNet V2, estimates food volume and approximates caloric content. The dual-approach methodology, selecting either a thumb or a plate as a reference based on object detection confidence scores, enhances the flexibility and robustness of the calorie estimation process. The project caters to a diverse user base, ranging from those with specific dietary needs to individuals aiming to reduce food waste. 
+
+Thanks for reading, hope you enjoyed!
 
