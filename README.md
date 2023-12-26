@@ -3,8 +3,8 @@
 ## Results
 
 <div style="display:flex">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="200" height="300">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedBread.png" alt="Screenshot 2" width="200" height="300">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="300" height="200">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedBread.png" alt="Screenshot 2" width="300" height="200">
 </div>
 
 ## Motivation and Problem Area
