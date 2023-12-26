@@ -4,8 +4,6 @@
 
 ![Predicted Apple](https://raw.githubusercontent.com/hmckin/Capstone/Master/ResultsScreenshots/PredictedApple.png)
 
-![Predicted Bread](https://raw.githubusercontent.com/hmckin/Capstone/Master/ResultsScreenshots/PredictedBread.png)
-
 ## Motivation and Problem Area
 
 Many people find it difficult to adhere to diets because they can be overly restrictive or require considerable effort to track calories.
