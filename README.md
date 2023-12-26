@@ -40,7 +40,7 @@ The EDA focuses on visualizing pixel value intensity histograms and reconstructi
 The reconstruction of average images provides insights into the characteristic appearance of each class, contributing to an understanding of features influencing model discernibility. This reconstruction is shown for each class here:
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AverageImages.png" alt="Screenshot 1" width="600" height="400">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AverageImages.png" alt="Screenshot 1" width="600" height="600">
 </div>
 
 Overall, this EDA strategically explores image characteristics, shedding light on features crucial for accurate classification in the learning process of CNNs.
