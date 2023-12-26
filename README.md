@@ -38,13 +38,13 @@ The EDA focuses on visualizing pixel value intensity histograms and reconstructi
 The classification model's performance was assessed using loss and accuracy curves. The highest validation accuracy seen during training was 99.4%. These curves are shown here:
 
 <div style="display:flex">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/LossCurves.png" alt="Screenshot 1" width="600" height="250">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AccuracyCurves.png" alt="Screenshot 1" width="600" height="250">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/LossCurves.png" alt="Screenshot 1" width="400" height="400">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AccuracyCurves.png" alt="Screenshot 1" width="400" height="400">
 </div>
 
 A confusion matrix is employed to evaluate the classification results, offering a comprehensive view of the model's strengths and areas for improvement. Precision, recall and f-1 scores were not used as evaluation metrics as the model performs well across all classes, except for apples and peppers. These were the two most confused classes. The confusion matrix is shown here:
 
-<div style="display:flex">
+<div style="display: flex; justify-content: center; align-items: center;">
   <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/ConfusionMatrix.png" alt="Screenshot 1" width="600" height="500">
 </div>
 
