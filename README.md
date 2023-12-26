@@ -3,18 +3,21 @@
 ## Results
 
 <div style="display:flex">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="400" height="250">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedBread.png" alt="Screenshot 2" width="400" height="250">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="800" height="500">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedBread.png" alt="Screenshot 2" width="800" height="500">
 </div>
 
 ## Motivation and Problem Area
 
-Many people find it difficult to adhere to diets because they can be overly restrictive or require considerable effort to track calories.
-There is opportunity for machine learning to eliminate time consuming and repetitive tasks related to nutrition.
+Many individuals find it challenging to adhere to proper nutrition due to restrictive diets and/or the laborious task of tracking calories. Recognizing the potential for machine learning to simplify nutrition-related tasks, this project aims to utilize artificial intelligence to automate the classification of common food items and estimate their caloric content.
 
 ## Machine Learning Solution
 
-This project will use a pre-trained CNN model to classify common food items. The project will also estimate the volume of the food items using a thumb in the image as a reference to calculate the cross-sectional area of the item. This will be done using an off-the-shelf model from Tensorflow API. The calorie estimation can be achieved by calculating the volume using the cross-sectional area, depth, denisty of the item and approximating the item to a common shape. (ex. apple represented as a sphere)
+### Transfer Learning for Food Classification
+To address food classification, the project employs transfer learning with EfficientNet B0, a pre-trained convolutional neural network. The baseline model is established by freezing the weights of the convolutional layers, capitalizing on insights learned from the Imagenet dataset. Additional layers, such as Global Average Pooling, dense layers, dropout, and a final dense layer matching the number of classes, are introduced to complete the architecture. **The code for this approach is demonstrated in the Jupyter Notebook called BaselineModelling.**
+
+### Volume Estimation and Caloric Approximation
+To address the absence of bounding box annotations or caloric labels in my dataset, a dual-approach is implemented. I use an off-the-shelf object detection model, combining Faster RCNN and InceptionResNet V2 from TensorFlow Hub to estimate the calories. Based on the confidence score for the objects detected, either a thumb or a plate in the image is chosen as a reference. The reference is then used to predict dimensions for the food item and the volume is calculated by approximating food items as 3D objects (spheres, cylinders, and prisms). Using tabulated values for food densities, the volume is used to derive the mass of the food item. Finally, the nutrition is calculated using tabulated values for calories per unit mass. **The code is demonstrated in the Jupyter Notebook named AdvancedModelling.**
 
 ## Users and Impact
 
@@ -22,20 +25,28 @@ Nutrition poses a number of positive and negative impacts to a diverse range of 
 
 ## Dataset
 
-The dataset consists of 3281 images. There are 16 unique food classes that I will be classifying. Each of these photos has a thumb in the reference. 
+The dataset comprises 3281 images, each belonging to one of 16 unique food classes. All images feature either a thumb or a plate as a reference. Prior to training, images are resized as NumPy arrays with a size of (224, 224, 3), a resolution suitable for EfficientNet B0. 
 
-I have resized each of these images to a resolution of (224,224,3) which is required for EfficientNet B0. 
+In the object detection model, the images are loaded directly from JPEG files using TensorFlow methods.
 
 ## EDA
 
-I focus my EDA on investigating class imbalances, plotting pixel value intensity histograms and reconstructing the average image from each class using the mean values of the NumPy arrays. 
-
-## Model Architecture
-
-I have developed a baseline model that uses EfficientNet B0 as the backbone. I have frozen the weights in the convolutional layers to take advantage of training on the Imagenet dataset. 
-
-I then added a Global Average Pooling layer, a dense layer, dropout and a final dense layer matching the number of classes in the dataset. 
+The EDA focuses on visualizing pixel value intensity histograms and reconstructing average images using mean values from NumPy arrays. This process uncovers implicit features that convolutional neural networks (CNNs) may learn during training. Pixel intensity histograms visually represent the distribution of pixel values, showing patterns specific to different food items. The reconstruction of average images provides insights into the characteristic appearance of each class, contributing to an understanding of features influencing model discernibility. Overall, this EDA strategically explores image characteristics, shedding light on features crucial for accurate classification in the learning process of CNNs.
 
 ## Model Evaluation
 
-I evaluate the model using loss and accuracy curves as well as a confusion matrix.
+The classification model's performance was assessed using loss and accuracy curves. The highest validation accuracy seen during training was 99.4%. These curves are shown here:
+
+<div style="display:flex">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/LossCurves.png" alt="Screenshot 1" width="400" height="250">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AccuracyCurves.png" alt="Screenshot 1" width="400" height="250">
+</div>
+
+A confusion matrix is employed to evaluate the classification results, offering a comprehensive view of the model's strengths and areas for improvement. Precision, recall and f-1 scores were not used as evaluation metrics as the model performs well across all classes, except for apples and peppers. These were the two most confused classes. The confusion matrix is shown here:
+
+<div style="display:flex">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/LossCurves.png" alt="Screenshot 1" width="600" height="500">
+</div>
+
+Without ground truth labels for calories, there was no method for evaluating the accuracy of the object detection model.
+
