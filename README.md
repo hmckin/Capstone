@@ -1,6 +1,6 @@
-# Capstone Project
+# Capstone Project: Estimating Calories from Images of Food
 
-## Results:
+## Results (Sneak Peek)
 
 <div style="display:flex">
   <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="800" height="500">
