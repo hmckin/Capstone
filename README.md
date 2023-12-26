@@ -2,10 +2,7 @@
 
 ## Results
 
-<div style="display:flex">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="400" height="300">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedBread.png" alt="Screenshot 2" width="400" height="300">
-</div>
+![Screenshot 1](https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedApple.png) ![Screenshot 2](https://raw.githubusercontent.com/hmckin/Capstone/ResultsScreenshots/PredictedBread.png)
 
 ## Motivation and Problem Area
 
