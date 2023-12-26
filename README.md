@@ -34,13 +34,13 @@ In the object detection model, the images are loaded directly from JPEG files us
 The EDA focuses on visualizing pixel value intensity histograms and reconstructing average images using mean values from NumPy arrays. This process uncovers implicit features that convolutional neural networks (CNNs) may learn during training. Pixel intensity histograms visually represent the distribution of pixel values, showing patterns specific to different food items. An example of this analysis is shown below:
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PixelValueHistograms.png" alt="Screenshot 1" width="600" height="500">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PixelValueHistograms.png" alt="Screenshot 1" width="800" height="500">
 </div>
 
 The reconstruction of average images provides insights into the characteristic appearance of each class, contributing to an understanding of features influencing model discernibility. This reconstruction is shown for each class here:
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AverageImages.png" alt="Screenshot 1" width="600" height="500">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/AverageImages.png" alt="Screenshot 1" width="600" height="400">
 </div>
 
 Overall, this EDA strategically explores image characteristics, shedding light on features crucial for accurate classification in the learning process of CNNs.
