@@ -1,5 +1,12 @@
 # Capstone Project
 
+## Results
+
+<div style="display:flex">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedApple.png" alt="Screenshot 1" width="400" height="250">
+  <img src="https://raw.githubusercontent.com/hmckin/Capstone/master/ResultsScreenshots/PredictedBread.png" alt="Screenshot 2" width="400" height="250">
+</div>
+
 ## Motivation and Problem Area
 
 Many people find it difficult to adhere to diets because they can be overly restrictive or require considerable effort to track calories.
