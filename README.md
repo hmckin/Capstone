@@ -1,8 +1,8 @@
-# Capstone Project: Estimating Calories from Images of Food
+# Capstone Project: Estimating Calories from Images of Food Using Python
 
 ## Navigating my Repository
 
-**JupyterNotebooks:** These notebooks contain all of the experimentation that led to my final results.
+**JupyterNotebooks:** These notebooks contain all of the Python code that led to my final results.
 
 **Presentations:** These are pdfs of Google Slides that I used to update my supervisor and colleagues at the end of sprints.
 
