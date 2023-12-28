@@ -33,7 +33,7 @@ Nutrition poses a number of positive and negative impacts to a diverse range of 
 
 ## Dataset
 
-The dataset comprises 3281 images, each belonging to one of 16 unique food classes. All images feature either a thumb or a plate as a reference. Prior to training, images are resized as NumPy arrays with a size of (224, 224, 3), a resolution suitable for EfficientNet B0. 
+The original dataset can be found here: [Link to Dataset](https://ieee-dataport.org/open-access/foodd-food-detection-dataset-calorie-measurement-using-food-images). The cleaned dataset comprises 3281 images, each belonging to one of 16 unique food classes. All images feature either a thumb or a plate as a reference. Prior to training, images are resized as NumPy arrays with a size of (224, 224, 3), a resolution suitable for EfficientNet B0. 
 
 In the object detection model, the images are loaded directly from JPEG files using TensorFlow methods.
 
