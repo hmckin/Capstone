@@ -2,14 +2,11 @@
 
 ## Navigating my Repository
 
-### JupyterNotebooks
-These notebooks contain all of the experimentation that led to my final results.
+**JupyterNotebooks:** These notebooks contain all of the experimentation that led to my final results.
 
-### Presentations
-These are pdfs of Google Slides that I used to update my supervisor and colleagues at the end of sprints.
+**Presentations:** These are pdfs of Google Slides that I used to update my supervisor and colleagues at the end of sprints.
 
-### ResultsScreenshots
-These are highlights from my experimentation in Jupyter Notebooks.
+**ResultsScreenshots:** These are highlights from my experimentation in Jupyter Notebooks.
 
 ## Sample Results
 
